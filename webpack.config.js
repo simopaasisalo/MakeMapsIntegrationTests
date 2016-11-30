@@ -19,6 +19,19 @@ module.exports = {
         test: /\.json$/,
         loader: "json-loader"
       },
+      {
+        test: /\.css$/,
+        loader: "style-loader!css-loader"
+      },
+      {
+        test: /\.png$/,
+        loader: 'url-loader',
+        query: { mimetype: 'image/png' }
+      },
+      {
+        test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
+        loader: 'url-loader'
+      }
     ]
   },
   // required for xlsx to work with webpack
